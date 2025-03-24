@@ -3,37 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Comparison Tool</title>
+    <title>PDF Comparer</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff-match-patch/20121119/diff_match_patch.min.js"></script>
-    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <h1>PDF Comparison Tool</h1>
-        <div class="upload-section">
-            <div class="pdf-upload">
-                <h3>PDF 1</h3>
-                <input type="file" id="pdf1" accept=".pdf">
-                <div class="preview" id="preview1"></div>
-            </div>
-            <div class="pdf-upload">
-                <h3>PDF 2</h3>
-                <input type="file" id="pdf2" accept=".pdf">
-                <div class="preview" id="preview2"></div>
-            </div>
+        <div class="upload-area">
+            <input type="file" id="pdf1" accept=".pdf">
+            <input type="file" id="pdf2" accept=".pdf">
+            <button id="compare">Compare</button>
         </div>
-        <button id="compare-btn">Compare PDFs</button>
-        <div class="results">
-            <h2>Comparison Results</h2>
-            <div id="text-diff"></div>
-            <div class="visual-diff">
-                <div class="diff-preview" id="diff-preview1"></div>
-                <div class="diff-preview" id="diff-preview2"></div>
-            </div>
-        </div>
+        <div id="results"></div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
